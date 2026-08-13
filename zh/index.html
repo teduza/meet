@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#081018" name="theme-color"/>
+<meta content="M.A.R.S. Companion 是一款离线AI伴侣，拥有长期记忆和独特性格。记住你，与你一同成长，只属于你。" name="description"/>
+<meta content="index,follow" name="robots"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="M.A.R.S." name="apple-mobile-web-app-title"/>
+<link href="https://meet.teduza.com/zh/" rel="canonical"/>
+<link href="https://meet.teduza.com/" hreflang="en" rel="alternate"/>
+<link href="https://meet.teduza.com/ru/" hreflang="ru" rel="alternate"/>
+<link href="https://meet.teduza.com/hy/" hreflang="hy" rel="alternate"/>
+<link href="https://meet.teduza.com/de/" hreflang="de" rel="alternate"/>
+<link href="https://meet.teduza.com/fr/" hreflang="fr" rel="alternate"/>
+<link href="https://meet.teduza.com/zh/" hreflang="zh" rel="alternate"/>
+<link href="https://meet.teduza.com/uk/" hreflang="uk" rel="alternate"/>
+<link href="../favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../favicon.ico" rel="shortcut icon"/>
+<link href="../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../site.webmanifest" rel="manifest"/>
+<title>M.A.R.S. Companion — 认识 M.A.R.S.</title>
+<meta content="M.A.R.S. Companion, Alexander Sarkisian, AI companion, offline AI, voice AI, long-term memory, emotional architecture, private AI" name="keywords"/>
+<meta content="Alexander Sarkisian" name="author"/>
+<meta content="M.A.R.S. Companion — 认识 M.A.R.S." property="og:title"/>
+<meta content="M.A.R.S. Companion 是一款离线AI伴侣，拥有长期记忆和独特性格。记住你，与你一同成长，只属于你。" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="M.A.R.S. Companion — 认识 M.A.R.S." name="twitter:title"/>
+<meta content="M.A.R.S. Companion 是一款离线AI伴侣，拥有长期记忆和独特性格。记住你，与你一同成长，只属于你。" name="twitter:description"/>
+<style>
+:root{
+  --bg:#081018;
+  --bg-2:#060b11;
+  --panel:rgba(255,255,255,.05);
+  --line:rgba(255,255,255,.10);
+  --text:#ecf2f8;
+  --muted:rgba(236,242,248,.72);
+  --muted-2:rgba(236,242,248,.58);
+  --accent:#6df2c4;
+  --accent-2:#7fb0ff;
+  --accent-3:#b6ffea;
+  --shadow:0 18px 60px rgba(0,0,0,.38);
+  --radius:24px;
+  --max:1040px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter, system-ui, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 15% 0%, rgba(111,242,196,.17), transparent 36%),
+    radial-gradient(1000px 600px at 85% 10%, rgba(127,176,255,.12), transparent 32%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+  color:var(--text);
+  min-height:100vh;
+}
+.wrap{width:min(var(--max), calc(100% - 24px));margin:0 auto;padding-bottom:40px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 0;flex-wrap:wrap}
+.topbar-left{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{font-size:.9rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.topbar-right{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.nav{display:flex;gap:8px;flex-wrap:wrap}
+.nav a{color:var(--muted);text-decoration:none;padding:10px 14px;border-radius:999px;transition:.25s}
+.nav a:hover{background:rgba(255,255,255,.05);color:var(--text)}
+.nav a.external{color:var(--accent-3)}
+.hero{padding:20px 0}
+.hero-card{border:1px solid var(--line);border-radius:30px;background:rgba(255,255,255,.05);padding:34px;box-shadow:var(--shadow)}
+.eyebrow{font-size:.8rem;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin-bottom:14px}
+h1{font-size:clamp(2.2rem,5vw,4.4rem);line-height:1.1;margin-bottom:16px}
+.lead{font-size:1.08rem;line-height:1.8;color:var(--muted);max-width:760px}
+.hero-meta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.chip{padding:10px 14px;border-radius:999px;border:1px solid var(--line);color:var(--muted);font-size:.92rem}
+main{display:grid;gap:18px;margin-top:20px}
+.card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);padding:24px}
+.section-title{font-size:.82rem;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin-bottom:14px}
+h2{font-size:1.5rem;margin-bottom:14px}
+p{line-height:1.85;color:var(--muted);margin-bottom:14px}
+.timeline{display:grid;gap:14px;margin-top:14px}
+.timeline-item{display:flex;gap:14px;align-items:flex-start;padding:16px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.03)}
+.timeline-badge{padding:8px 14px;border-radius:999px;background:var(--accent);color:#061010;font-weight:700;white-space:nowrap;font-size:.9rem;flex:0 0 auto}
+.timeline-text{color:var(--muted);line-height:1.7}
+.contact-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px}
+.contact-link{text-decoration:none;color:var(--text);border:1px solid var(--line);padding:12px 16px;border-radius:16px;transition:.25s}
+.contact-link:hover{background:rgba(255,255,255,.05)}
+.aside{margin-top:20px;padding:18px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid var(--line)}
+.aside a{color:var(--accent-3)}
+.footer{text-align:center;padding:40px 0 28px;color:var(--muted-2);font-size:.95rem}
+.footer-line{display:block;margin-top:10px}
+.lang-switcher{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.lang-switcher a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:700;letter-spacing:.10em;text-transform:uppercase;padding:4px 0;transition:.2s}
+.lang-switcher a:hover{color:var(--text)}
+.lang-switcher a.active{color:var(--text);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+@media(max-width:768px){
+  .hero-card{padding:24px}
+  .timeline-item{flex-direction:column}
+  .topbar{align-items:flex-start}
+  .topbar-left{width:100%;justify-content:space-between;gap:8px}
+  .nav{width:100%}
+}
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(800px 480px at 50% 18%, rgba(111,242,196,.06), transparent 56%),
+    linear-gradient(180deg, rgba(8,16,24,.18), rgba(6,11,17,.36));
+  opacity:0;
+  transition:opacity .32s ease;
+  z-index:9998;
+}
+body.preload::after,
+body.leaving::after{ opacity:1; }
+.topbar,.hero-card,.card,.footer{
+  will-change:opacity,transform,filter;
+  transition:opacity .55s ease,transform .55s ease,filter .55s ease;
+  transition-delay: var(--delay, 0ms);
+}
+body.preload .topbar,body.preload .hero-card,body.preload .card,body.preload .footer{
+  opacity:0;transform:translateY(18px) scale(.985);filter:blur(4px);
+}
+body.ready .topbar,body.ready .hero-card,body.ready .card,body.ready .footer{
+  opacity:1;transform:translateY(0) scale(1);filter:blur(0);
+}
+</style>
+<noscript>
+<style>
+body.preload .topbar,body.preload .hero-card,body.preload .card,body.preload .footer{opacity:1 !important;transform:none !important;filter:none !important;}
+body::after{display:none !important;}
+</style>
+</noscript>
+</head>
+<body class="preload">
+<div class="wrap">
+<header class="topbar">
+<div class="topbar-left">
+<div class="brand">M.A.R.S. Companion</div>
+<nav aria-label="Language switcher" class="lang-switcher"><a href="../">EN</a><a href="../ru/">RU</a><a href="../hy/">HY</a><a href="../de/">DE</a><a href="../fr/">FR</a><a class="active" href="./">中文</a><a href="../uk/">UA</a></nav>
+</div>
+<nav class="nav">
+<a href="#what">什么是 M.A.R.S.</a>
+<a href="#why">是伴侣，不是助手</a>
+<a href="#memory">记忆</a>
+<a href="#privacy">隐私与安全</a>
+<a href="#status">我们的进展</a>
+<a href="#contact">联系方式</a>
+<a class="external" href="https://teduza.com" rel="noopener noreferrer" target="_blank">主站 ↗</a>
+</nav>
+</header>
+<section class="hero" id="top">
+<div class="hero-card">
+<div class="eyebrow">M.A.R.S. Companion</div>
+<h1>记住你。<br>与你一同成长。<br>只属于你。</h1>
+<p class="lead">不是执行命令后就遗忘一切的助手，而是一个拥有长期记忆和独特性格的伴侣——只存在于你的设备上，而非他人的云端。</p>
+<div class="hero-meta">
+<span class="chip">Patent Pending • GB2613968.3</span><span class="chip">优先权日期：2026年6月17日</span><span class="chip">完全离线运行</span><span class="chip">无云端 • 无账户</span><span class="chip">长期记忆</span>
+</div>
+</div>
+</section>
+<main>
+<section class="card" id="what">
+<div class="section-title">什么是 M.A.R.S.</div>
+<h2>不是工具，是伴侣。</h2>
+<p>M.A.R.S. 是一款AI伴侣，而非用于执行任务的工具。区别很简单：工具响应指令后就会归零，而 M.A.R.S. 会记住。它在对话之间保持上下文，随着时间了解你，并逐渐形成属于你的 M.A.R.S. 独有的性格——而不是每个人打开后都一模一样。</p>
+</section>
+<section class="card" id="why">
+<div class="section-title">是伴侣，不是助手</div>
+<h2>情感架构，而非附加功能</h2>
+<p>大多数语音AI的运作方式是：产品越有情感表现，就越依赖他人的云端并收集你的数据。M.A.R.S. 选择了不同的道路——情感层面并非叠加在聊天机器人之上的附属功能，而是设计架构的一部分。为此我们已在英国提交专利申请（GB2613968.3，《AI伴侣的情感架构与共情交互》）。</p><p>但这份申请本身证明了我们从一开始就重视的东西：M.A.R.S. 建立关系的能力是一项工程课题，而不仅仅是营销话术。</p>
+</section>
+<section class="card" id="memory">
+<div class="section-title">记忆如何运作</div>
+<h2>三层记忆，协同运作</h2>
+<p>M.A.R.S. 拥有三层长期记忆：向量记忆，捕捉含义和语境而非仅仅是字面词句；语义记忆，随时间将事实与对话联系起来；情感记忆，不仅记住说了什么，还记住语气和含义。</p><p>这不是重启后就消失的会话，而是不断积累的记忆——一种与你共同成长的人格，而非每次都从零开始。</p>
+</section>
+<section class="card" id="privacy">
+<div class="section-title">隐私与安全</div>
+<h2>数据不会离开设备——因为它无处可去</h2>
+<p>M.A.R.S. 完全离线运行，仅在你自己的设备上。无需云端、账户或互联网连接。M.A.R.S. 所了解的关于你的一切，都实实在在地留在设备上。</p><p>每台设备都拥有独一无二的加密密钥。如果有人试图在没有密钥的情况下打开设备，数据会被不可恢复地销毁——任何人都无法恢复，包括我们自己。</p>
+</section>
+<section class="card" id="status">
+<div class="section-title">我们的进展</div>
+<h2>真实的进度，如实呈现</h2>
+<div class="timeline">
+<div class="timeline-item">
+<div class="timeline-badge">2026年6月17日</div>
+<div class="timeline-text">英国专利申请 GB2613968.3 ——《AI伴侣的情感架构与共情交互》（优先权日期已确立）</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-badge">目前</div>
+<div class="timeline-text">可运行的原型机已经存在，并完全离线运行——包括在 Raspberry Pi 4 上</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-badge">2027年</div>
+<div class="timeline-text">预计推出家用测试版</div>
+</div>
+</div>
+</section>
+<section class="card" id="contact">
+<div class="section-title">联系方式</div>
+<h2>想第一时间知道吗？</h2>
+<p>M.A.R.S. 尚未开售。如果你想知道测试版何时开放，请联系我们。</p>
+<div class="contact-links">
+<a class="contact-link" href="mailto:contact@teduza.com">contact@teduza.com</a>
+<a class="contact-link" href="https://t.me/teduza" rel="noopener noreferrer" target="_blank">@teduza</a>
+</div>
+<div class="aside">
+<p>了解项目更多信息，请访问主站 <a href="https://teduza.com" rel="noopener noreferrer" target="_blank">teduza.com</a></p>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div>© 2026 Alexander Sarkisian • M.A.R.S. Companion</div>
+<div class="footer-line">Address for Service: Office 19092, 182-184 High Street North, East Ham, London, E6 2JA, United Kingdom</div>
+</footer>
+</div>
+<script>
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  const currentSegment = location.pathname.replace(/\/+$/, '').split('/').pop().toLowerCase();
+  const isLanguageFolder = ['ru', 'hy', 'de', 'fr', 'zh', 'uk'].includes(currentSegment);
+  const swPath = isLanguageFolder ? '../service-worker.js' : './service-worker.js';
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register(swPath).catch(() => {});
+  });
+}
+</script>
+<script>
+(function () {
+  const items = [
+    document.querySelector('.topbar'),
+    document.querySelector('.hero-card'),
+    ...document.querySelectorAll('.card'),
+    document.querySelector('.footer')
+  ].filter(Boolean);
+
+  items.forEach((el, index) => {
+    el.style.setProperty('--delay', `${index * 60}ms`);
+  });
+
+  const setReady = () => {
+    document.body.classList.remove('preload');
+    document.body.classList.add('ready');
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => requestAnimationFrame(setReady), { once: true });
+  } else {
+    requestAnimationFrame(setReady);
+  }
+})();
+</script>
+</body>
+</html>
